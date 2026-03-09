@@ -1,0 +1,8 @@
+{
+  "variant": "FEAT",
+  "steerer_entropy_coeff": 0.5,
+  "forced_exploration_prob": 0.2,
+  "forced_exploration_min": 0.02,
+  "seed": 42,
+  "num_episodes": 5000
+}

@@ -9,6 +9,7 @@ FEAT 算法配置文件
 """
 
 import numpy as np
+from datetime import datetime
 from dataclasses import dataclass, field
 from typing import Tuple, Optional
 
@@ -195,8 +196,8 @@ class ExperimentConfig:
     net_config: NetworkConfig = field(default_factory=NetworkConfig)
     train_config: TrainingConfig = field(default_factory=TrainingConfig)
     
-    # 实验名称和路径
-    experiment_name: str = "FEAT_default"
+    # 实验名称和路径 (默认使用时间戳，避免覆盖旧实验)
+    experiment_name: str = field(default_factory=lambda: datetime.now().strftime("Run_%Y-%m-%d_%H-%M-%S"))
     save_dir: str = "./checkpoints"
     log_dir: str = "./logs"
     

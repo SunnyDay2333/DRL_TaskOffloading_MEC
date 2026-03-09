@@ -46,8 +46,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description='FEAT 算法训练')
     
     # 实验设置
-    parser.add_argument('--exp_name', type=str, default='FEAT_default',
-                       help='实验名称')
+    parser.add_argument('--exp_name', type=str, default=None,
+                       help='实验名称 (默认自动生成时间戳，如 FEAT_2026-03-09_15-30-45)')
     parser.add_argument('--seed', type=int, default=42,
                        help='随机种子')
     parser.add_argument('--device', type=str, default='cuda',
@@ -478,6 +478,9 @@ class FEATTrainer:
 def main():
     """主函数"""
     args = parse_args()
+    
+    if args.exp_name is None:
+        args.exp_name = datetime.now().strftime("Run_%Y-%m-%d_%H-%M-%S")
     
     # 创建配置
     config = create_default_config()
