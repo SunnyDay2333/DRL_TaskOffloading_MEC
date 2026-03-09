@@ -1,0 +1,81 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.manifest
+*.spec
+
+# ========================
+# Virtual Environments
+# ========================
+venv/
+.venv/
+env/
+ENV/
+
+# ========================
+# Model Checkpoints (large)
+# ========================
+checkpoints/**/*.pt
+checkpoints/**/*.pth
+checkpoints/**/*.ckpt
+checkpoints/**/*.bin
+*.pt
+*.pth
+*.ckpt
+
+# ========================
+# Training Logs
+# ========================
+logs/*/metrics.json
+logs/*/events.out.tfevents.*
+runs/
+tensorboard/
+
+# ========================
+# IDE / Editor
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ========================
+# OS Generated
+# ========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# ========================
+# Environment / Secrets
+# ========================
+.env
+.env.*
+*.key
+*.pem
+
+# ========================
+# Jupyter Notebook
+# ========================
+.ipynb_checkpoints/
+
+# ========================
+# Misc
+# ========================
+*.log
+*.tmp
+*.bak
+*.orig
