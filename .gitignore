@@ -41,6 +41,16 @@ runs/
 tensorboard/
 
 # ========================
+# Local experiment outputs (do not commit)
+# ========================
+experiments/
+logs/
+log/
+old/
+plans/
+plan/
+
+# ========================
 # IDE / Editor
 # ========================
 .vscode/
